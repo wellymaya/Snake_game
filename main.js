@@ -15,20 +15,20 @@ let food = {
 
 function criarBg() {
 	
-	context.fillStyle = 'gray';
+	context.fillStyle = 'black';
 	context.fillRect (0, 0, 16 * box, 16 * box);
 }//função define o background
 
 function criarCobra() {
 	
 	for(i=0; i < snake.length; i++){
-		context.fillStyle = 'black';
+		context.fillStyle = 'green';
 		context.fillRect(snake[i].x, snake[i].y, box, box)
 		}
 }
 
 function criarFood(){
-	context.fillStyle = "lightgreen";
+	context.fillStyle = "red";
 	context.fillRect(food.x, food.y, box, box);
 	
 }
