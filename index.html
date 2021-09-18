@@ -8,26 +8,81 @@
 
 		  	@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-			  body{
+			
+			body{
 				background-color:#bbdab4;
+				margin:0;
+				height: 100vh;
+				width: 100vw;
+				display: inline-block;
+				text-align: center;
+				overflow: hidden;
+				
+						}
+			
+			div{
+	
+				margin: auto;
+				height: 60%;
+				width: 50%;
+				display: flex;
+				justify-content:center;
+				flex-direction: column;
+				text-align: center;
+			}
+
+			 
+			h1{
+				font-family:'Lobster';
+				font-size: 50px;
+				margin: 1.5em;
+				text-shadow: rgb(29, 138, 29) 2px 2px;
+				color: rgb(48, 46, 46);
+			}
+
+			#snake{
+				border: chartreuse 2px solid;
+			}
+			.gameover{
+				  width: 100vw;
 				  height: 100vh;
-				  width: 100vh;
+				  background-color: rgba(0, 0, 0, 0.99);
+				  margin: 0;
+				  position: absolute;
+				  transition: .5s;
 				  display: flex;
-				  justify-content:center;
 				  flex-direction: column;
-				  text-align: center;
-				  margin: auto;
+				  align-items: center;
+				  justify-content: center;
 			  }
-			  h1{
-				  font-family:'Lobster';
-				  font-size: 50px;
-				  margin: 0.5em;
-				  text-shadow: rgb(29, 138, 29) 2px 2px;
-				  color: rgb(48, 46, 46);
-			  }
-			  #snake{
-				  border: chartreuse 2px solid;
-			  }
+
+			.gameover h1{
+				color: rgb(131, 24, 24);
+				text-shadow: rgb(75, 4, 4) 2px 2px;
+				font-family: 'Courier New', Courier, monospace;
+				font-size: 80px;
+			}
+			
+			button{
+				padding: 1.5em 6em;
+				margin-top: 50px;
+				transition: .5s;
+				background-color: antiquewhite;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				font-size: 14px;
+			}
+			button:hover{
+				background-color: rgb(69, 211, 152);
+			}
+
+			.hidden{
+				display: none;
+			}
+
+			
+
 			  
 			  
 		  </style>
@@ -37,6 +92,10 @@
 		  <div id="jogo">
 			  <canvas id="snake" width="512px" height="512px"></canvas>
 		  </div>	  
+		  <div class="gameover hidden">
+			  <h1>Game Over!</h1>
+			  <button onclick=iniciarGame()>Play Again</button>
+		  </div>
 			  <script src="main.js"></script>
 		 
 
