@@ -49,7 +49,8 @@ function iniciarGame() {
 		if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
 			clearInterval(jogo);
 			const gameover = document.querySelector('.gameover')
-			gameover.classList.remove('hidden')
+			gameover.classList.remove('hidden');
+			console.log('inciando')
 		}
 		
 	}
