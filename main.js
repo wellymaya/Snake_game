@@ -2,6 +2,8 @@ let canvas = document.getElementById("snake");
 let context = canvas.getContext('2d');//renderiza a imagem
 let box = 32; 
 let snake = [];
+score = 0
+
 snake[0] = {
 	x: 8 * box,
 	y: 8 * box
@@ -43,19 +45,28 @@ function update (Event){
 	if(Event.keyCode == 40 && direction != "up") direction ="down";
 }
 
+
+function atualizaPlacar() {
+	const placar = document.getElementById('placar');
+
+	placar.innerHTML= score
+
+
+}
+
 function iniciarGame() {
+
+	atualizaPlacar()
 	
 	for(i = 1; i < snake.length; i++){
 		if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
 			clearInterval(jogo);
 			const gameover = document.querySelector('.gameover')
 			gameover.classList.remove('hidden');
-			console.log('inciando')
 		}
-		
 	}
-	
-	
+
+
 	if(snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
 	if(snake[0].x < 0 * box && direction == "left") snake[0].x = 16 * box;
 	if(snake[0].y > 15 * box && direction == "down") snake[0].y = 0;
@@ -80,15 +91,23 @@ function iniciarGame() {
 	else{
 		food.x = Math.floor(Math.random() * 15 +1 )*box,
 		food.y = Math.floor(Math.random() * 15 +1 )*box
+
+		score += 1
+		console.log(score)
+
 	}
-	
-	
+
 	let novaCabeca = {
 		x: snakeX,
 		y: snakeY
 	}
 
 	snake.unshift(novaCabeca)
+
+	const placarFinal = document.getElementById('placarFinal');
+	placarFinal.innerHTML = score;
+
+
 }
 
 let jogo = setInterval(iniciarGame, 100);
