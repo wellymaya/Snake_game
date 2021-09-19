@@ -111,3 +111,12 @@ function iniciarGame() {
 }
 
 let jogo = setInterval(iniciarGame, 100);
+
+function reiniciar() {
+	
+	let init = document.querySelector('.gameover');
+	init.classList.add('hidden')
+
+ 	location.reload()
+
+}
