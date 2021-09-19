@@ -1,7 +1,7 @@
-<h1>Jogo da cobrinha desenvolvido em Javascript.</h1>
-<h2>📸 Demonstração </h2>
+<h1>Snake Game - Dio</h1>
+<p>📸 Demonstração </p>
 <br>
+<img src="https://github.com/wellymaya/Snake_game/blob/master/animacao.gif" width ="800px">
 
-<img src = "https://github.com/wellymaya/Snake_game/blob/master/Anima%C3%A7%C3%A3o.gif">
 <br>
-<a href= "https://wellymaya.github.io/Snake_game/">  Teste:</a>
+<a href= "https://wellymaya.github.io/Snake_game/"> <img src="https://img.shields.io/badge/-Testar-brightgreen" width="60px"></a>
